@@ -18,5 +18,9 @@ public class CustomList {
 
     // Will be implemented later using TDD (leave blank for now)
     // public boolean hasCity(City city) { ... }
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+
 }
 // Testing Testing 123

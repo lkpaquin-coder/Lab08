@@ -18,6 +18,7 @@ public class CustomListTest {
     void testDelete() {
         CustomList list = new CustomList();
         City city = new City("Edmonton", "Alberta"); // Creates identical city as is in list
+        list.addCity(city);
         list.delete(city);
         assertFalse(list.hasCity(city));
     }

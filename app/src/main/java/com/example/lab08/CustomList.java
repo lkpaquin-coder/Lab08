@@ -5,6 +5,7 @@ import java.util.List;
 
 public class CustomList {
     private List<City> cities;
+    private int length;
 
     public CustomList() {
         this.cities = new ArrayList<>();
@@ -12,6 +13,7 @@ public class CustomList {
 
     public void addCity(City city) {
         cities.add(city);
+        length += 1;
     }
 
     
@@ -22,5 +24,15 @@ public class CustomList {
         return cities.contains(city);
     }
 
-}
+    public void delete(City city){
+        for (int i = 0 ; i < length; ++i){
+            if ((cities.get(i).getCityName().compareTo(city.getCityName()) == 0) && (cities.get(i).getProvinceName().compareTo(city.getProvinceName()) == 0)) {
+                cities.remove(i);
+                length = length - 1;
+                return;
+            }
+        }
+        throw new IllegalArgumentException(); // If it doesn't return in the for loop, this happens
+
+}}
 // Testing Testing 123

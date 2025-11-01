@@ -33,6 +33,9 @@ public class CustomList {
             }
         }
         throw new IllegalArgumentException(); // If it doesn't return in the for loop, this happens
-
-}}
+}
+    public int countCities(){
+        return length;
+    }
+}
 // Testing Testing 123
